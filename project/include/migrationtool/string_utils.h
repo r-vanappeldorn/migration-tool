@@ -5,4 +5,6 @@
 
 bool stringInArray(const char *needle, const char *const *array);
 
+int findIndexOfString(const char *needle, const char *const *array);
+
 #endif
