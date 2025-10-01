@@ -1,0 +1,32 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Iproject/include",
+      "-c",
+      "-o",
+      "src/main.o",
+      "src/main.c"
+    ],
+    "directory": "/home/rajeev/Projects/migration_tool",
+    "file": "/home/rajeev/Projects/migration_tool/src/main.c",
+    "output": "/home/rajeev/Projects/migration_tool/src/main.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Iproject/include",
+      "-c",
+      "-o",
+      "src/string_utils.o",
+      "src/string_utils.c"
+    ],
+    "directory": "/home/rajeev/Projects/migration_tool",
+    "file": "/home/rajeev/Projects/migration_tool/src/string_utils.c",
+    "output": "/home/rajeev/Projects/migration_tool/src/string_utils.o"
+  }
+]

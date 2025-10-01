@@ -1,4 +1,4 @@
-#include "string_utils.h"
+#include <migrationtool/string_utils.h>
 #include <string.h>
 
 bool stringInArray(const char *needle, const char *const *array) {
