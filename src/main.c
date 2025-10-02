@@ -1,3 +1,4 @@
+#include <migrationtool/create_migration.h>
 #include <migrationtool/string_utils.h>
 #include <stdio.h>
 #include <string.h>
@@ -30,7 +31,7 @@ int main(int argc, char *argv[]) {
 
   switch (selectedMode) {
   case CREATE_MIGRATION:
-    printf("create migration selected\n");
+    return createMigration();
     break;
   }
 
