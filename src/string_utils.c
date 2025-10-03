@@ -1,5 +1,6 @@
 #include <ctype.h>
 #include <migrationtool/string_utils.h>
+#include <stddef.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -23,29 +24,28 @@ int findIndexOfString(const char *needle, const char *const *array) {
   return -1;
 }
 
-char *convertToSnakeCase(const char *str) {
-  int strLength = strlen(str);
-  char *snakeCaseStr = malloc(strLength + 1);
-  if (!snakeCaseStr) {
-    return NULL;
+void toSnakeCase(char *buff, size_t size, const char *str) {
+  if (!str || !buff || !size) {
+    return;
   }
 
-  for (int i = 0; i < strLength; i++) {
+  size_t len = strlen(str);
+
+  for (size_t i = 0; i < len; i++) {
     if (isupper(str[i])) {
-      snakeCaseStr[i] = tolower(str[i]);
+      buff[i] = tolower(str[i]);
 
       continue;
     }
 
     if (isspace(str[i])) {
-      snakeCaseStr[i] = '_';
+      buff[i] = '_';
 
       continue;
     }
 
-    snakeCaseStr[i] = str[i];
+    buff[i] = str[i];
   }
 
-  snakeCaseStr[strLength] = '\0';
-  return snakeCaseStr;
+  buff[len] = '\0';
 }
